@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
@@ -9,28 +9,32 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
 
-      - name: Install Dependencies
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
         run: npm run build
 
-      - name: Test
-        run: npm test  # Add this step to run your unit tests
+      - name: Linting and Code Quality Check
+        run: npm run lint
+
+      - name: Error Handling and Security Checks
+        run: npm run security-check
 
       - name: Deploy to Production
-        run: |
-          # Add your deployment commands here for deploying to the production environment
-
-      - name: Deploy to Staging
-        run: |
-          # Add your deployment commands here for deploying to the staging environment
-
-      # Add additional steps as needed for further deployment or post-deployment tasks
+        run: npm run deploy
