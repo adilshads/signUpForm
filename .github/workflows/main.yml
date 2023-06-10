@@ -1,0 +1,36 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test  # Add this step to run your unit tests
+
+      - name: Deploy to Production
+        run: |
+          # Add your deployment commands here for deploying to the production environment
+
+      - name: Deploy to Staging
+        run: |
+          # Add your deployment commands here for deploying to the staging environment
+
+      # Add additional steps as needed for further deployment or post-deployment tasks
