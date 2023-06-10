@@ -9,3 +9,7 @@
   "author": "",
   "license": "ISC"
 }
+
+"scripts": {
+  "build": "echo 'Build step executed'"
+}
