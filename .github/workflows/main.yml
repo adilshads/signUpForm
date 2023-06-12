@@ -39,10 +39,10 @@ jobs:
             exit 1
           fi
 
-          if [ -f style.css ]; then
+          if [ -f styles.css ]; then
             echo "styles.css file found!"
           else
-            echo "style.css file not found!"
+            echo "styles.css file not found!"
             exit 1
           fi
           
