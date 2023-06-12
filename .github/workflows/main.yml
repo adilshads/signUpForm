@@ -23,6 +23,41 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v3
 
+      # Run Build Verification Test (BVT)
+      - name: Run BVT
+        run: |
+          # Add commands to run your BVT
+          # For example:
+          echo "Running Build Verification Test..."
+          # Add commands to compile or execute the necessary BVT scripts or commands
+          
+          # Example commands to validate the presence of index.html and style.css files
+          if [ -f index.html ]; then
+            echo "index.html file found!"
+          else
+            echo "index.html file not found!"
+            exit 1
+          fi
+
+          if [ -f style.css ]; then
+            echo "style.css file found!"
+          else
+            echo "style.css file not found!"
+            exit 1
+          fi
+          
+          # Ensure to capture the result of the BVT execution
+
+          # Example exit code handling for success or failure
+          if [ $? -eq 0 ]; then
+            echo "BVT passed!"
+          else
+            echo "BVT failed!"
+            exit 1
+          fi
+
+      # Additional steps for reporting or notifications
+
       # Add build steps here, such as compiling your code or preparing the application
 
   test:
