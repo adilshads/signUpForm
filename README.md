@@ -51,6 +51,6 @@ Provide information on how users can seek support for the sign-up form project. 
 
 # Credit
 
-Acknowledge any external resources, libraries, or individuals whose work you've used or referenced in the project. Give proper credit and attribution to show appreciation for their contributions.
+![Anonymous Figure](https://www.pexels.com/photo/silhouette-of-man-1480690/)
 
-Tailor these sections to fit the specific requirements and features of your sign-up form project. By providing comprehensive information, you will help users understand and use your project effectively.
+![Sebastiaan Stam](https://www.pexels.com/@sebastiaan9977/)
