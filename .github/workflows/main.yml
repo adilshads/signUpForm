@@ -67,7 +67,8 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v3
 
-      # Add test steps here, such as running unit tests or integration tests
+      # Add test steps here, such as running unit tests or integration tests, functional test
+      # Performance tests, security tests, acceptance tests. 
 
   deploy:
     needs: [build, test]
