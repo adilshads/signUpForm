@@ -15,6 +15,33 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-      
+      - run: echo "🍏 This job's status is ${{ job.status }}."     
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      # Add build steps here, such as compiling your code or preparing the application
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      # Add test steps here, such as running unit tests or integration tests
+
+  deploy:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      # Add deployment steps here, such as deploying your application to a server or a cloud platform
+
+      # You can also include additional steps for notifications or clean-up actions after deployment
