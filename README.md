@@ -54,3 +54,6 @@ Provide information on how users can seek support for the sign-up form project. 
 ![Anonymous Figure](https://www.pexels.com/photo/silhouette-of-man-1480690/)
 
 ![Sebastiaan Stam](https://www.pexels.com/@sebastiaan9977/)
+
+![Logo](https://pixabay.com/vectors/vendetta-mask-guy-fawkes-face-man-157703/)
+![OpenClipart-Vectors](https://pixabay.com/users/openclipart-vectors-30363/)
