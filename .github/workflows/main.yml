@@ -16,7 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Download Image 1
-        run: |
-          wget https://wallpapers.com/picture/profile-picture-ga69ja3uuwn63i5i.html -O anonymousSignUpForm.jpg
+      
 
