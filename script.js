@@ -80,3 +80,51 @@ function validateForm() {
   return true; // Submit the form if all checks pass
 }
 
+// Password Strength Meter
+
+
+const passwordInput = document.getElementById('user_password');
+const passwordStrengthMeter = document.getElementById('password-strength-meter');
+
+passwordInput.addEventListener('input', function() {
+  const password = passwordInput.value;
+  const strength = calculatePasswordStrength(password);
+  updatePasswordStrengthMeter(strength);
+});
+
+function calculatePasswordStrength(password) {
+    
+  let strength = 0;
+
+  if (password.length >= 8) {
+    strength += 20; // Increment strength for meeting minimum length requirement
+  }
+  if (/[a-z]/.test(password)) {
+    strength += 20; // Increment strength for including lowercase letters
+  }
+  if (/[A-Z]/.test(password)) {
+    strength += 20; // Increment strength for including uppercase letters
+  }
+  if (/\d/.test(password)) {
+    strength += 20; // Increment strength for including numbers
+  }
+  if (/\W/.test(password)) {
+    strength += 20; // Increment strength for including special characters
+  }
+  return strength;
+}
+
+function updatePasswordStrengthMeter(strength) {
+  passwordStrengthMeter.style.width = strength + '%';
+
+  if (strength < 40) {
+    passwordStrengthMeter.style.backgroundColor = 'red';
+    passwordStrengthMeter.textContent = 'Weak';
+  } else if (strength < 70) {
+    passwordStrengthMeter.style.backgroundColor = 'orange';
+    passwordStrengthMeter.textContent = 'Medium';
+  } else {
+    passwordStrengthMeter.style.backgroundColor = 'green';
+    passwordStrengthMeter.textContent = 'Strong';
+  }
+}
