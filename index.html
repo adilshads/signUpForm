@@ -30,7 +30,7 @@
             </p>
         </div>
 
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="return validateForm()">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" placeholder="First Name"
             pattern="[a-zA-Z0-9]+" title="Please enter a valid name: Letters or Numbers or a combination 
@@ -78,6 +78,7 @@
                 I have read and agree to the 
                 <a href="privacyPolicy.html".html target="_blank" id="privacy_link">Privacy Policy</a>.
             </label>
+
         </form>
 
         <div>

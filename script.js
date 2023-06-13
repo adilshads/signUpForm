@@ -59,3 +59,24 @@ privacyCheckbox.addEventListener('change', updateSubmitButtonState);
 function updateSubmitButtonState() {
   submitButton.disabled = !(termsCheckbox.checked && privacyCheckbox.checked);
 }
+
+
+// Client Side Sanitization for emails
+
+function validateForm() {
+  var emailInput = document.getElementById('user_email');
+  var email = emailInput.value.trim();
+
+  // Remove leading and trailing spaces
+  emailInput.value = email;
+
+  // Validate the email format using a regular expression
+  var emailRegex = /^\S+@\S+\.\S+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  return true; // Submit the form if all checks pass
+}
+
