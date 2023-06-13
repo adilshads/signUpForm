@@ -60,7 +60,7 @@
             <input type="phone_number" id="phone_number" name="phone_number" placeholder="000-000-0000"
             pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="US based Phone Number in the format of: 123-456-7890" required>
 
-            <input type="submit" onclick="checkPasswordMatch()" value="Create Account">
+            <input type="submit" id="submit_button" onclick="checkPasswordMatch()" value="Create Account" disabled>
 
 
             <label>
@@ -68,6 +68,7 @@
                 I have read and agree to the 
                 <a href="termsAndConditions.html" target="_blank" id="terms_link">Terms and Conditions</a>.
             </label>
+
         </form>
 
         <div>
