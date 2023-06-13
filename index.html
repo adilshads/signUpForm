@@ -12,96 +12,108 @@
 
 
 </head>
+
 <body>
-    <img src="anonymousSignUpForm.jpg" alt="Image of black siloute figure wearing an anonymous 
-    mask outline in neon blue">
-    <img src="logoSignUpForm.svg" alt="Outline of anonymous mask face">
-
-    <p> CrypticGlow </p>
-
-    <header> 
-        <h1> This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
-            Sign up now to get started.
-            You know you want to. </h1>
-    </header>
-
-    <main>
-
-        <div>
-            <p>
-                Lets do this!
-            </p>
-        </div>
-
-        <form action="" method="post" onsubmit="return validateForm()">
-
-            <!-- First Name and Last Name -->
+    <div class="container-fluid">
+        <img src="anonymousSignUpForm.jpg" alt="Image of black siloute figure wearing an anonymous 
+        mask outline in neon blue">
+        <img src="logoSignUpForm.svg" alt="Outline of anonymous mask face">
+    
+        <p> CrypticGlow </p>
+    
+        <header> 
+            <h1> This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+                You know you want to. </h1>
+        </header>
+    
+        <main>
+    
             <div>
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" placeholder="First Name"
-                pattern="[a-zA-Z0-9]+" title="Please enter a valid name: Letters or Numbers or a combination 
-                of both" autocomplete="on" required>
-
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" placeholder="Last Name"
-                pattern="[a-zA-Z0-9]+" title="Please enter a valid name: Letters or Numbers or a combination 
-                of both" autocomplete="on" required>
+                <p>
+                    Lets do this!
+                </p>
             </div>
-            <!-- Email Address and Phone Number -->
-            <div>
-                <label for="user_email">Email Address:</label>
-                <input type="email" id="user_email" name="user_email" placeholder="you@example.com"
-                autocomplete="email" required>
-
-                <label for="phone_number">Phone Number:</label>
-                <input type="phone_number" id="phone_number" name="phone_number" placeholder="000-000-0000"
-                pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="US based Phone Number in the format of: 123-456-7890"
-                autocomplete="on" required>
-            </div>
-            <!-- Passwords -->
-            <div>
-                <label for="user_password">Password:</label>
-                <input type="password" id="user_password" name="user_password" placeholder="********" 
-                minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
-                autocomplete="new-password" required>
+    
+            <form action="" method="post" onsubmit="return validateForm()">
+    
+                <!-- First Name and Last Name -->
+                <div>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name"
+                    pattern="[a-zA-Z0-9]+" title="Please enter a valid name: Letters or Numbers or a combination 
+                    of both" autocomplete="on" required>
+    
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name"
+                    pattern="[a-zA-Z0-9]+" title="Please enter a valid name: Letters or Numbers or a combination 
+                    of both" autocomplete="on" required>
+                </div>
+                <!-- Email Address and Phone Number -->
+                <div>
+                    <label for="user_email">Email Address:</label>
+                    <input type="email" id="user_email" name="user_email" placeholder="you@example.com"
+                    autocomplete="email" required>
+    
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="phone_number" id="phone_number" name="phone_number" placeholder="000-000-0000"
+                    pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="US based Phone Number in the format of: 123-456-7890"
+                    autocomplete="on" required>
+                </div>
+                <!-- Passwords -->
+                <div>
+                    <label for="user_password">Password:</label>
+                    <input type="password" id="user_password" name="user_password" placeholder="********" 
+                    minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
+                    autocomplete="new-password" required>
+                    <label>
+                        <input type="checkbox" id="password_toggle"> Show Password
+                    </label>
+                    
+                    <div id="password-strength-meter"></div>
+                    
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="********" 
+                    minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" 
+                    autocomplete="new-password-confirm" required>
+    
+                    <p id="message"></p>
+    
+                    <input type="submit" id="submit_button" onclick="checkPasswordMatch()" value="Create Account" disabled>
+                </div>
+                <!-- Fake Terms and Conditions and Fake Privacy Policy-->
                 <label>
-                    <input type="checkbox" id="password_toggle"> Show Password
+                    <input type="checkbox" id="agree_terms_checkbox" name="agree_terms" disabled required>
+                    I have read and agree to the 
+                    <a href="termsAndConditions.html" target="_blank" id="terms_link">Terms and Conditions</a>.
                 </label>
-                
-                <div id="password-strength-meter"></div>
-                
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="********" 
-                minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" 
-                autocomplete="new-password-confirm" required>
-
-                <p id="message"></p>
-
-                <input type="submit" id="submit_button" onclick="checkPasswordMatch()" value="Create Account" disabled>
+    
+                <label>
+                    <input type="checkbox" id="agree_privacy_checkbox" name="agree_privacy" disabled required>
+                    I have read and agree to the 
+                    <a href="privacyPolicy.html".html target="_blank" id="privacy_link">Privacy Policy</a>.
+                </label>
+    
+            </form>
+    
+            <div>
+                <p>Already have an account?</p>
+                <a href="">Log in</a>
             </div>
-            <!-- Fake Terms and Conditions and Fake Privacy Policy-->
-            <label>
-                <input type="checkbox" id="agree_terms_checkbox" name="agree_terms" disabled required>
-                I have read and agree to the 
-                <a href="termsAndConditions.html" target="_blank" id="terms_link">Terms and Conditions</a>.
-            </label>
+        </main>
+        <footer> </footer>
+          
 
-            <label>
-                <input type="checkbox" id="agree_privacy_checkbox" name="agree_privacy" disabled required>
-                I have read and agree to the 
-                <a href="privacyPolicy.html".html target="_blank" id="privacy_link">Privacy Policy</a>.
-            </label>
 
-        </form>
 
-        <div>
-            <p>Already have an account?</p>
-            <a href="">Log in</a>
-        </div>
-    </main>
-    <footer> </footer>
+
+
+
+
+
+
       
 </body>
 </html>
