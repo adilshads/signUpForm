@@ -15,7 +15,7 @@
     <img src="logoSignUpForm.svg" alt="Outline of anonymous mask face">
 
     <p> CrypticGlow </p>
-    
+
     <header> 
         <h1> This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
             Sign up now to get started.
@@ -61,6 +61,13 @@
             pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="US based Phone Number in the format of: 123-456-7890" required>
 
             <input type="submit" onclick="checkPasswordMatch()" value="Create Account">
+
+
+            <label>
+                <input type="checkbox" id="agree_terms_checkbox" name="agree_terms" disabled required>
+                I have read and agree to the 
+                <a href="termsAndConditions.html" target="_blank" id="terms_link">Terms and Conditions</a>.
+            </label>
         </form>
 
         <div>
