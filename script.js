@@ -37,3 +37,12 @@ const submitButton = document.getElementById('submit_button');
 agreeTermsCheckbox.addEventListener('change', function() {
   submitButton.disabled = !agreeTermsCheckbox.checked;
 });
+
+// Checks to make sure privacy policy is clicked before allowing box to be checked 
+
+const privacyLink = document.getElementById('privacy_link');
+const agreePrivacyCheckbox = document.getElementById('agree_privacy_checkbox');
+
+privacyLink.addEventListener('click', function() {
+  agreePrivacyCheckbox.disabled = false;
+});
