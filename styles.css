@@ -3,12 +3,13 @@ input {
     margin-bottom: 15px;
     padding: 5px;
     border-radius: 5px;
-}
+  }
   
-input:invalid {
+  input:invalid:not(:placeholder-shown) {
     border-color: red;
-}
-
-input:valid {
+  }
+  
+  input:valid {
     border-color: green;
-}
+  }
+  
