@@ -31,12 +31,13 @@ termsLink.addEventListener('click', function() {
   agreeTermsCheckbox.disabled = false;
 });
 
-// Checks to make sure terms and conditions box is checked
+// Checks to make sure terms and conditions box is checked before clicking "Create Account"
 const submitButton = document.getElementById('submit_button');
 
 agreeTermsCheckbox.addEventListener('change', function() {
   submitButton.disabled = !agreeTermsCheckbox.checked;
 });
+
 
 // Checks to make sure privacy policy is clicked before allowing box to be checked 
 
@@ -46,3 +47,15 @@ const agreePrivacyCheckbox = document.getElementById('agree_privacy_checkbox');
 privacyLink.addEventListener('click', function() {
   agreePrivacyCheckbox.disabled = false;
 });
+
+
+// Checks to make sure terms and conditions privacy policy is clicked before allowing "Create Account" to be pressed
+const termsCheckbox = document.getElementById('agree_terms_checkbox');
+const privacyCheckbox = document.getElementById('agree_privacy_checkbox');
+
+termsCheckbox.addEventListener('change', updateSubmitButtonState);
+privacyCheckbox.addEventListener('change', updateSubmitButtonState);
+
+function updateSubmitButtonState() {
+  submitButton.disabled = !(termsCheckbox.checked && privacyCheckbox.checked);
+}
