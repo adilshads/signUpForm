@@ -46,6 +46,13 @@ jobs:
             exit 1
           fi
           
+          if [ -f script.js ]; then
+            echo "script.js file found!"
+          else
+            echo "script.js file not found!"
+            exit 1
+          fi
+          
           # Ensure to capture the result of the BVT execution
 
           # Example exit code handling for success or failure
