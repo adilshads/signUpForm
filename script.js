@@ -21,3 +21,9 @@ function checkPasswordMatch() {
     }
 }
 
+const termsLink = document.getElementById('terms_link');
+const agreeTermsCheckbox = document.getElementById('agree_terms_checkbox');
+
+termsLink.addEventListener('click', function() {
+  agreeTermsCheckbox.disabled = false;
+});
