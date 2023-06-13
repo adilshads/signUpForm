@@ -47,9 +47,9 @@ jobs:
           fi
           
           if [ -f script.js ]; then
-            echo "styles.css file found!"
+            echo "script.js file found!"
           else
-            echo "styles.css file not found!"
+            echo "script.js file not found!"
             exit 1
           fi
           
