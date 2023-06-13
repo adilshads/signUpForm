@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "Personal project: Simplifying sign-ups for a better user experience.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "jest": {
+      "testEnvironment": "node"
+    }
   },
   "author": "",
-  "license": "ISC"
-}
-
-{
-  "scripts": {
-    "build": "npm run build"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

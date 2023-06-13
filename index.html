@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
 
 </head>
 <body>
@@ -51,13 +53,14 @@
             minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
             title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" required>
 
+            <p id="message"></p>
+
             <label for="phone_number">Phone Number:</label>
             <input type="phone_number" id="phone_number" name="phone_number" placeholder="000-000-0000"
             pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="US based Phone Number in the format of: 123-456-7890" required>
 
+            <input type="button" onclick="checkPasswordMatch()" value="Create Account">
         </form>
-
-        <button>Create Account</button>
 
         <div>
             <p>Already have an account?</p>
@@ -65,5 +68,6 @@
         </div>
     </main>
     <footer> </footer>
+      
 </body>
 </html>
