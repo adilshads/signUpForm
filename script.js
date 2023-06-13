@@ -1,3 +1,5 @@
+// Checks to make sure passwords match 
+
 function checkPasswordMatch() {
     let user_password = document.getElementById
     ("user_password").value;
@@ -21,9 +23,17 @@ function checkPasswordMatch() {
     }
 }
 
+// Checks to make sure that the terms and conditions button is clicked before allowing box to be checked.
 const termsLink = document.getElementById('terms_link');
 const agreeTermsCheckbox = document.getElementById('agree_terms_checkbox');
 
 termsLink.addEventListener('click', function() {
   agreeTermsCheckbox.disabled = false;
+});
+
+// Checks to make sure terms and conditions box is checked
+const submitButton = document.getElementById('submit_button');
+
+agreeTermsCheckbox.addEventListener('change', function() {
+  submitButton.disabled = !agreeTermsCheckbox.checked;
 });
