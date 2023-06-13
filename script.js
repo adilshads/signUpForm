@@ -128,3 +128,16 @@ function updatePasswordStrengthMeter(strength) {
     passwordStrengthMeter.textContent = 'Strong';
   }
 }
+
+
+// Show Password or Hide Password 
+
+const passwordToggleCheckbox = document.getElementById('password_toggle');
+
+passwordToggleCheckbox.addEventListener('change', function() {
+  if (passwordToggleCheckbox.checked) {
+    passwordInput.type = 'text';
+  } else {
+    passwordInput.type = 'password';
+  }
+});
