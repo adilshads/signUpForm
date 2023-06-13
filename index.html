@@ -44,7 +44,12 @@
             minlength="8" required>
 
             <label for="phone_number">Phone Number:</label>
-            <input type="phone_number" id="phone_number" name="phone_number" placeholder="0000000000" required>
+            <input type="phone_number" id="phone_number" name="phone_number" placeholder="0000000000"
+            pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+
+              
+            
+              <input type="text" id="zip_code" name="zip_code" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
         </form>
 
         <button>Create Account</button>
