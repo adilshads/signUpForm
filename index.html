@@ -54,8 +54,10 @@
             minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
             title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
             autocomplete="new-password" required>
-
-            <input type="checkbox" id="password_toggle">
+            <label>
+                <input type="checkbox" id="password_toggle"> Show Password
+            </label>
+            
             <div id="password-strength-meter"></div>
             
             <label for="confirm_password">Confirm Password:</label>
