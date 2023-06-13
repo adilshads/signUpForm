@@ -27,7 +27,8 @@
 
         <form action="" method="post">
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+            <input type="text" id="first_name" name="first_name" placeholder="First Name"
+            pattern="[a-zA-Z0-9]+" required>
 
             <label for="last_name">Last Name:</label>
             <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
@@ -47,9 +48,6 @@
             <input type="phone_number" id="phone_number" name="phone_number" placeholder="000-000-0000"
             pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
 
-              
-            
-              <input type="text" id="zip_code" name="zip_code" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
         </form>
 
         <button>Create Account</button>
