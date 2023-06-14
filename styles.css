@@ -109,6 +109,7 @@ main div p {
 main form div input {
     margin-right: 10px;
 }
+
 input#submit_button {
     background-color: #007BFF;
     color: #FFF;
@@ -125,8 +126,26 @@ input#submit_button {
 
 main div a {
     color: #007BFF;
+}
+
+.login {
+    color: #6C19FF;
     text-decoration: none;
 }
+
+footer {
+    margin-left: 50px;
+    margin-top: 100px;
+    display: flex;
+    color: #007BFF;
+}
+
+footer a {
+    color:#007BFF;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 /* Image and Logo */
 
 .image-container {
