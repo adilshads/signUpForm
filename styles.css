@@ -110,8 +110,8 @@ main form div input {
     margin-right: 10px;
 }
 input#submit_button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007BFF;
+    color: #FFF;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -122,7 +122,11 @@ input#submit_button {
     background-color: #C2FFFF;
     color:#6C19FF;
   }
-  
+
+main div a {
+    color: #007BFF;
+    text-decoration: none;
+}
 /* Image and Logo */
 
 .image-container {
