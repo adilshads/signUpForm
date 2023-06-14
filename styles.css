@@ -101,6 +101,9 @@ main div p {
     margin-bottom: 20px;
 }
 
+main form div input {
+    margin-right: 10px;
+}
 /* Image and Logo */
 
 .image-container {
