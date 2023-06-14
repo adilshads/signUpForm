@@ -55,11 +55,10 @@ Provide information on how users can seek support for the sign-up form project. 
 
 ![Sebastiaan Stam](https://www.pexels.com/@sebastiaan9977/)
 
-![Logo](https://pixabay.com/vectors/vendetta-mask-guy-fawkes-face-man-157703/)
-![OpenClipart-Vectors](https://pixabay.com/users/openclipart-vectors-30363/)
+![Logo](https://icons8.com/icon/QVxj97IYzWCX/anonymous-mask)
 
 This project includes code from the following sources:
 
 [Reset: CSS](https://meyerweb.com/eric/tools/css/reset/index.html): 
-Used for [resetting styles for crossbrowser compatibility](https://meyerweb.com/eric/tools/css/reset/reset.css).
+Used for [Resetting styles for crossbrowser compatibility](https://meyerweb.com/eric/tools/css/reset/reset.css).
 

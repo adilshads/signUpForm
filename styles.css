@@ -57,6 +57,7 @@ body {
     display: flex;
 }
 
+/* Right Side of Screen */
 input {
     border: 2px solid #000;
     margin-bottom: 15px;
@@ -72,11 +73,14 @@ input:valid {
     border-color: green;
 }
 
+/* Image and Logo */
+
 .image-container {
-    width: 40%;
+    width: 60%;
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
   
 .image-container img {
@@ -84,7 +88,40 @@ input:valid {
     height: 100%;
     object-fit: fill;
 }
-  
-body {
+
+.logo {
     display: flex;
+    height: auto;
+    gap: 1vw;
+    padding: 15px 0; 
+    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
+    width: 40.5%;
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    z-index: 1;
 }
+
+.logo-img {
+    width: 30%;
+    height: auto;
+}
+
+.logo-name {
+    font-family: Norse;
+    font-weight: bold;
+    font-size: 10vh;
+    color: #C2FFFF;
+}
+
+/* Color Scheme
+
+#C2FFFF light blue
+#7DEBF5 darker blue
+#3DD9EB even darker blue
+#6C19FF purple
+
+*/
+
