@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - CrypticGlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="image-container">
+        <img src="anonymousSignInPage.jpg" alt="Image of black silhouette figure wearing an anonymous mask outlined in neon blue" class="float-sm-start">
+    </div>
+
+    <div class="logo">
+        <img src="icons8-anonymous-mask.svg" alt="Outline of anonymous mask face neon blue and purple" class="logo-img">
+        <p class="logo-name">CrypticGlow</p>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1 class="hook">This is not a real online service! Welcome back to CrypticGlow. Sign in to your account and embrace the mystery.</h1>
+        </header>
+
+        <main class="form">
+            <div>
+                <p>Welcome back!</p>
+            </div>
+
+            <form action="" method="post" onsubmit="return validateForm()">
+                <div>
+                    <input type="text" id="username" name="username" placeholder="Username" autocomplete="username" required>
+                </div>
+
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Password" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" autocomplete="current-password" required>
+                    <label>
+                        <input type="checkbox" id="password_toggle"> Show Password
+                    </label>
+                </div>
+
+                <input type="submit" id="submit_button" value="Sign In">
+            </form>
+
+            <div>
+                <p>New to CrypticGlow?</p>
+                <a href="signup.html" class="signup">Sign Up</a>
+            </div>
+        </main>
+
+        <footer>
+            <a target="_blank" href="https://icons8.com/icon/QVxj97IYzWCX/anonymous-mask">
+                <p>Anonymous Mask</p>
+            </a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </footer>
+    </div>
+</body>
+</html>
