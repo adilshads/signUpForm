@@ -73,7 +73,15 @@ input:valid {
     border-color: green;
 }
 
-
+.hook {
+    font-family: Montserrat, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    padding: 10px 0; 
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 
 /* Image and Logo */
 
@@ -103,18 +111,18 @@ input:valid {
     position: absolute; 
     top: 0;
     left: 0; 
-    z-index: 1;
+    z-index: 0;
 }
 
 .logo-img {
-    width: 30%;
+    width: 20%;
     height: auto;
 }
 
 .logo-name {
-    font-family: Norse;
+    font-family: Norse, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 10vh;
+    font-size: 3em;
     color: #C2FFFF;
 }
 
