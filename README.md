@@ -99,7 +99,7 @@ The sign-in page includes fields for username or email address and password. The
 Heres an example screenshot illustrating the user interface of the sign-up and sign-in forms:
 
 ![Sign-up Form](screenshotSignUp.png)
-![Sign-in From](screenshotSignUp.png)
+![Sign-in From](screenshotSignIn.png)
 
 # Technologies Used
 
