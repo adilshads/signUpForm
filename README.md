@@ -5,10 +5,6 @@ Personal project: Simplifying sign-ups for a better user experience.
 
 A sign up form that can be used to create an account and user profile for new users. 
 
-# Table of Contents
-
-Include a table of contents to help readers navigate through different sections of the README.
-
 # Installations
 
 # Usage
